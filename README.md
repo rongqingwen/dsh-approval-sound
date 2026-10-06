@@ -16,9 +16,11 @@
 
 ## 安装
 
-三种方式任选，装完**必须重启 `dsh web` / 桌面端**（原因见下）。
+最省事的方式：到 [Releases](https://github.com/rongqingwen/dsh-approval-sound/releases/latest) 下载 **`dsh-approval-sound-<版本>.tgz`**，然后在桌面端 `设置` → `插件` → 安装 里选中它。
 
-**方式一：桌面端界面**（最省事）
+也可以按下面的方式安装。**装完必须重启 `dsh web` / 桌面端**（原因见下）。
+
+**方式一：桌面端界面**
 
 `设置` → `插件` → 安装，选择插件目录（或本地安装包）。
 
