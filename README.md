@@ -16,28 +16,37 @@
 
 ## 安装
 
-最省事的方式：到 [Releases](https://github.com/rongqingwen/dsh-approval-sound/releases/latest) 下载 **`dsh-approval-sound-<版本>.tgz`**，然后在桌面端 `设置` → `插件` → 安装 里选中它。
+四种方式任选。**装完必须重启 `dsh web` / 桌面端**（原因见下）。
 
-也可以按下面的方式安装。**装完必须重启 `dsh web` / 桌面端**（原因见下）。
+**方式一：下载安装包**（最省事）
 
-**方式一：桌面端界面**
+到 [Releases](https://github.com/rongqingwen/dsh-approval-sound/releases/latest) 下载 `dsh-approval-sound-<版本>.tgz`，然后在桌面端 `设置` → `插件` → 安装 里选中它。
 
-`设置` → `插件` → 安装，选择插件目录（或本地安装包）。
-
-**方式二：命令行**
+**方式二：从 GitHub 仓库直接安装**
 
 ```sh
-# 桌面端
+# 桌面端（带 tag 可锁定版本，推荐）
+dsh plugin --profile desktop add github:rongqingwen/dsh-approval-sound#v0.4.1
+
+# 不带 tag 则跟随 main 的最新代码
+dsh plugin --profile desktop add github:rongqingwen/dsh-approval-sound
+
+# 用 CLI 的 web profile 时，把 desktop 换成 web
+dsh plugin --profile web add github:rongqingwen/dsh-approval-sound#v0.4.1
+```
+
+> 这条路径要求本机能访问 github.com，网络受限的环境需要代理。不带 tag 会跟随 `main`，所以建议带 tag 锁定版本。
+
+**方式三：安装本地目录或本地包**
+
+```sh
 dsh plugin --profile desktop add link:<插件目录>
 dsh plugin --profile desktop add <dsh-approval-sound-版本.tgz 的路径>
-
-# CLI 的 web profile 把 desktop 换成 web
-dsh plugin --profile web add link:<插件目录>
 ```
 
 > 本地目录要用 `link:` 前缀，否则会被当成要去 npm 上找的包名。
 
-**方式三：手工**
+**方式四：手工**
 
 1. 把插件目录整个拷进 profile 的 `node_modules/dsh-approval-sound/`；
 2. 在 `~/.dsh/profiles/<profile>/package.json` 的 `dsh.profile.bundles` 里加上 `dsh-approval-sound`；
