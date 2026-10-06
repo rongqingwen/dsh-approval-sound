@@ -1,0 +1,12 @@
+# Dependencies are never installed for a linked plugin (it ships zero-build,
+# zero-runtime-dependency), so a stray node_modules here is always accidental.
+node_modules/
+
+# Distribution tarballs are build output, not source.
+*.tgz
+dist/
+
+# Logs and OS noise.
+*.log
+.DS_Store
+Thumbs.db

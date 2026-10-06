@@ -1,0 +1,12 @@
+# dsh-approval-sound bundle patch: inserts its plugin row into the web plugin
+# roster. The single row mounts BOTH halves: the host side (the
+# `approval/request` waterfall observer and the loopback routes under
+# /api/dsh-approval-sound/) and the browser side (the polling alert engine, the
+# Web Audio voices and the 权限提示音 settings section, served from this
+# package's client.js).
+#
+# Install into a profile with:
+#   dsh plugin --profile desktop add link:<repo>/dsh-approval-sound
+- insert:
+    - id: approval-sound
+      name: 'dsh-approval-sound'

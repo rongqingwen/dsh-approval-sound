@@ -1,0 +1,42 @@
+{
+  "name": "dsh-approval-sound",
+  "version": "0.4.1",
+  "description": "Audible alert for the dsh web GUI: plays a distinct sound the moment the harness raises a prompt that is waiting for you — approval panels AND ask-user-question panels — with synthesized per-seam voices or your own uploaded audio, pushed through a limiter so it can exceed 100%",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "main": "host.js",
+  "exports": {
+    ".": "./host.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "host.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "approval",
+    "permission",
+    "notification",
+    "sound"
+  ],
+  "dependencies": {},
+  "dsh": {
+    "engines": {
+      "dsh": ">=0.1.5-rc.1"
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}

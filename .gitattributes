@@ -1,0 +1,4 @@
+# Keep the repository LF-normalized so every platform checks out the same bytes.
+# This plugin ships host.js and client.js as-is (no build step), and the local
+# `core.autocrlf=true` would otherwise rewrite them to CRLF on checkout.
+* text=auto eol=lf
